@@ -3,23 +3,14 @@ package org.civn.hayokoi;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Hayokoi extends JavaPlugin implements Listener
 {
-	public static void onPlayerTeleport (PlayerTeleportEvent event)
-	{
-		Player p = event.getPlayer();
-
-		p.getWorld().playSound(p.getLocation(), Sound.ENDERMAN_TELEPORT, 5, 1);
-	}
-
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
@@ -55,7 +46,7 @@ public class Hayokoi extends JavaPlugin implements Listener
 						}
 
 						players.teleport(targetLocation);
-						players.sendMessage(ChatColor.GOLD + "[Hayokoi] You were called by" + ChatColor.RED + target.getName());
+						players.sendMessage(ChatColor.GOLD + "[Hayokoi] You were called by " + ChatColor.RED + target.getName());
 					}
 
 					return true;
