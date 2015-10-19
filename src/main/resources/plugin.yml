@@ -1,0 +1,13 @@
+name: Hayokoi
+description: You can call to you.
+author: CIVN
+website: http://civn.xyz/
+main: org.civn.hayokoi.Hayokoi
+version: 1.0
+
+commands:
+  hayokoi:
+    description: You can see Author and Version.
+    usage: /hayokoi [NONE or help or call]
+    permission: hayokoi.hayokoi
+    permission-message: You don't have <permission>.
